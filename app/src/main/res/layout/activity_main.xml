@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="charl_kakashi.fr.apneil.MainActivity">
+
+
+     <com.jjoe64.graphview.GraphView
+         android:id="@+id/graph"
+         android:layout_width="match_parent"
+         android:layout_height="250dip"
+         tools:layout_editor_absoluteX="0dp"
+         tools:layout_editor_absoluteY="262dp" />
+
+      <TextView
+         android:layout_width="199dp"
+         android:layout_height="38dp"
+         android:text="Bluetooth Connexion"
+         android:textColor="#FF0000"
+         android:textSize="20"
+         tools:layout_editor_absoluteX="93dp"
+         tools:layout_editor_absoluteY="34dp" />
+
+     <Button
+         android:id="@+id/on"
+         android:layout_width="wrap_content"
+         android:layout_height="40dip"
+         android:text="ON"
+         tools:layout_editor_absoluteX="148dp"
+         tools:layout_editor_absoluteY="87dp" />
+
+     <Button
+         android:id="@+id/off"
+         android:layout_width="wrap_content"
+         android:layout_height="40dip"
+         android:text="OFF"
+         tools:layout_editor_absoluteX="148dp"
+         tools:layout_editor_absoluteY="141dp" />
+
+     <Button
+         android:id="@+id/dis"
+         android:layout_width="wrap_content"
+         android:layout_height="40dip"
+         android:text="Disconnect"
+         android:color="#FFFFFFF"
+         tools:layout_editor_absoluteX="137dp"
+         tools:layout_editor_absoluteY="198dp" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
