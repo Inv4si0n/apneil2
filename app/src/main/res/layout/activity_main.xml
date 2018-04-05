@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    context="charl_kakashi.fr.apneil.MainActivity"
+    xmlns="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="charl_kakashi.fr.apneil.MainActivity">
+    android:layout_height="match_parent">
 
 
-     <com.jjoe64.graphview.GraphView
-         android:id="@+id/graph"
-         android:layout_width="match_parent"
-         android:layout_height="250dip"
-         tools:layout_editor_absoluteX="0dp"
-         tools:layout_editor_absoluteY="262dp" />
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        layout_editor_absoluteX="0dp"
+        layout_editor_absoluteY="157dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
 
-      <TextView
+    <!-- <TextView
          android:layout_width="199dp"
          android:layout_height="38dp"
          android:text="Bluetooth Connexion"
@@ -23,32 +26,41 @@
          tools:layout_editor_absoluteX="93dp"
          tools:layout_editor_absoluteY="34dp" />
 
-     <Button
-         android:id="@+id/on"
-         android:layout_width="wrap_content"
-         android:layout_height="40dip"
-         android:text="ON"
-         tools:layout_editor_absoluteX="148dp"
-         tools:layout_editor_absoluteY="87dp" />
+     -->
+    <Button
+        android:id="@+id/on"
+        layout_editor_absoluteX="148dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_marginTop="8dp"
+        android:text="ON"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-     <Button
-         android:id="@+id/off"
-         android:layout_width="wrap_content"
-         android:layout_height="40dip"
-         android:text="OFF"
-         tools:layout_editor_absoluteX="148dp"
-         tools:layout_editor_absoluteY="141dp" />
+    <Button
+        android:id="@+id/off"
+        layout_editor_absoluteX="138dp"
+        layout_editor_absoluteY="101dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_marginTop="16dp"
+        android:text="OFF"
+        app:layout_constraintEnd_toEndOf="@+id/on"
+        app:layout_constraintTop_toBottomOf="@+id/on" />
 
-     <Button
-         android:id="@+id/dis"
-         android:layout_width="wrap_content"
-         android:layout_height="40dip"
-         android:text="Disconnect"
-         android:color="#FFFFFFF"
-         tools:layout_editor_absoluteX="137dp"
-         tools:layout_editor_absoluteY="198dp" />
-
-
+    <!--<Button
+        android:id="@+id/dis"
+        layout_editor_absoluteY="0dp"
+        android:layout_width="117dp"
+        android:layout_height="40dip"
+        android:layout_marginTop="36dp"
+        android:color="#FFFFFFF"
+        android:text="Disconnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/off" /> -->
 
 
 </android.support.constraint.ConstraintLayout>

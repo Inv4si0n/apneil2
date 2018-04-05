@@ -1,10 +1,13 @@
 package charl_kakashi.fr.apneil;
 
+import android.bluetooth.BluetoothAdapter;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-// import android.widget.Button;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
@@ -23,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter == null)
+            Toast.makeText(MainActivity.this, "Pas de Bluetooth",
+                    Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(MainActivity.this, "Avec Bluetooth",
+                    Toast.LENGTH_SHORT).show();
+
         GraphView graph = findViewById(R.id.graph);
 
         graph.setTitle("Apnée par nuit"); // Titre du graph
@@ -36,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         series.setThickness(2); // Epaisseur
 
         graph.addSeries(series);
+
+        Button button = findViewById(R.id.on);
+        Button buttona = findViewById(R.id.off);
     }
 
 
@@ -67,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < count; i++) {
             double x = i;
             double f = rand.nextDouble() * 0.15 + 0.3;
-            double y = Math.sin(i * f + 2) + rand.nextDouble() * 0.3;
+            double y = rand.nextInt();
             DataPoint v = new DataPoint(x, y);
             values[i] = v;
         }
